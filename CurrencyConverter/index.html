@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xChange</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="apple-touch-icon" sizes="128x128" href="dollar2.png">
+    <link rel="icon" sizes="192x192" href="dollar2.png">
+</head>
+
+<script>
+    function openNav1() {
+        document.getElementById("mySidebar1").style.width = "100vw";
+    }
+    function closeNav1() {
+        document.getElementById("mySidebar1").style.width = "0";
+        document.getElementById("main1").style.marginLeft= "0";
+    }
+    function UpdateNav1Div(x){
+        let div = document.getElementById("VisingPicture");
+        div.innerText = x;
+    }
+    function openNav2() {
+        document.getElementById("mySidebar2").style.width = "100vw";
+    }
+    function closeNav2() {
+        document.getElementById("mySidebar2").style.width = "0";
+        document.getElementById("main2").style.marginLeft= "0";
+    }
+    function UpdateNav2Div(x){
+        let div = document.getElementById("HomePicture");
+        div.innerText = x;
+    }
+</script>
+
+<body>
+
+<header>
+    <h1>Travel Rates</h1>
+</header>
+
+
+<div class="row">
+    <div class="column1" style="padding: 3vw">
+        <div class="TypeSelect">
+
+
+            <div id="main1" style="padding-top: 1vh; padding-bottom: 1vh">
+                <button class="openbtn" onclick="openNav1()" id="VisitingButton">Visiting</button>
+            </div>
+            <div id="VisingPicture">Euro</div>
+            <div id="VisitFlag">
+                <img src="Euro.png" id="Flag1" style="width: 22vw; height: 10vh">
+            </div>
+            <br>
+
+            <div id="main2" style="padding-top: 1vh; padding-bottom: 1vh">
+                <button class="openbtn" onclick="openNav2()" id="HomeButton">Home</button>
+            </div>
+            <div id="HomePicture">GBP</div>
+            <div id="HomeFlag">
+                <img src="GBP.png" id="Flag2"  style="width: 22vw; height: 10vh">
+            </div>
+
+            <div id="bankText" style="padding-top: 2vh">Bank fee:
+            </div>
+            <div id="bankFee" style="padding-top: 1vh">
+                <select name="bankFee" id="dropdown">
+                    <option value="0" selected="selected">0%</option>
+                    <option value="2" >2%</option>
+                    <option value="4" >4%</option>
+                    <option value="6" >6%</option>
+                </select>
+            </div>
+            <p id="printOut">
+            </p>
+        </div>
+    </div>
+
+    <div id="mySidebar1" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">X</a>
+        <H1 style="color: white">VISITING</H1>
+        <div style="padding-top: 3vh"><button value="Euro" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">Euro <img src="Euro.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="GBP" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">GBP <img src="GBP.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="PLN" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">PLN <img src="PLN.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="USD" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">USD <img src="USD.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="JPY" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">JPY <img src="JPY.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="BGN" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">BGN <img src="BGN.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="CZK" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">CZK <img src="CZK.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="DKK" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">DKK <img src="DKK.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="HUF" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">HUF <img src="HUF.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="RON" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">RON <img src="RON.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="SEK" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">SEK <img src="SEK.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="CHF" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">CHF <img src="CHF.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="NOK" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">NOK <img src="NOK.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="ISK" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">ISK <img src="ISK.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="NOK" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">NOK <img src="NOK.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="HRK" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">HRK <img src="HRK.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="RUB" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">RUB <img src="RUB.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="TRY" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">TRY <img src="TRY.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="AUD" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">AUD <img src="AUD.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="BRL" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">BRL <img src="BRL.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="CAD" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">CAD <img src="CAD.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="CNY" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">CNY <img src="CNY.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="HKD" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">HKD <img src="HKD.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="IDR" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">IDR <img src="IDR.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="ILS" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">ILS <img src="ILS.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="INR" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">INR <img src="INR.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="KRW" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">KRW <img src="KRW.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="MXN" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">MXN <img src="MXN.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="MYR" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">MYR <img src="MYR.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="NZD" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">NZD <img src="NZD.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="PHP" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">PHP <img src="PHP.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="SGD" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">SGD <img src="SGD.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="THB" onclick="UpdateNav1Div(this.value); view.setVisitFlag(this.value); closeNav1()">THB <img src="THB.png"  style="width: 8vw; height: 4vh"></button></div>
+    </div>
+
+    <div id="mySidebar2" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">X</a>
+        <H1 style="color: white">HOME</H1>
+        <div style="padding-top: 3vh"><button value="Euro" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">Euro <img src="Euro.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="GBP" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">GBP <img src="GBP.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="PLN" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">PLN<img src="PLN.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="USD" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">USD<img src="USD.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="JPY" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">JPY<img src="JPY.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="BGN" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">BGN<img src="BGN.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="CZK" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">CZK<img src="CZK.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="DKK" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">DKK<img src="DKK.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="HUF" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">HUF<img src="HUF.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="RON" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">RON<img src="RON.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="SEK" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">SEK<img src="SEK.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="CHF" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">CHF<img src="CHF.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="NOK" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">NOK<img src="NOK.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="ISK" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">ISK<img src="ISK.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="NOK" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">NOK<img src="NOK.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="HRK" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">HRK<img src="HRK.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="RUB" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">RUB<img src="RUB.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="TRY" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">TRY<img src="TRY.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="AUD" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">AUD<img src="AUD.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="BRL" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">BRL<img src="BRL.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="CAD" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">CAD<img src="CAD.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="CNY" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">CNY<img src="CNY.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="HKD" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">HKD<img src="HKD.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="IDR" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">IDR<img src="IDR.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="ILS" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">ILS<img src="ILS.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="INR" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">INR<img src="INR.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="KRW" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">KRW<img src="KRW.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="MXN" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">MXN<img src="MXN.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="MYR" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">MYR<img src="MYR.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="NZD" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">NZD<img src="NZD.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="PHP" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">PHP<img src="PHP.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="SGD" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">SGD<img src="SGD.png"  style="width: 8vw; height: 4vh"></button></div>
+        <div style="padding-top: 3vh"><button value="THB" onclick="UpdateNav2Div(this.value); view.setHomeFlag(this.value);closeNav2()">THB<img src="THB.png"  style="width: 8vw; height: 4vh"></button></div>
+    </div>
+
+    <div class="column2">
+        <div id = "outPut">
+                <div class="display1"><a id="vInput"></a><a id="Unit"></a></div>
+        </div>
+        <div class="container" id = "TouchPad" >
+                <div style="padding-top: 1vh"><button type="button" id="7">7</button></div><div><button type="button" id="8">8</button></div><div><button type="button" id="9">9</button></div>
+                <div style="padding-top: 2vh"><button type="button" id="4">4</button></div><div><button type="button" id="5">5</button></div><div><button type="button" id="6">6</button></div>
+                <div style="padding-top: 2vh"><button type="button" id="1">1</button></div><div><button type="button" id="2">2</button></div><div><button type="button" id="3">3</button></div>
+                <div style="padding-top: 2vh"><button type="button" id="Clear">C</button></div><div><button type="button" id="0">0</button></div><div><button type="button" id="Enter">=</button></div>
+        </div>
+    </div>
+</div>
+
+<script src="model.js"></script>
+<script src="view.js"></script>
+<script src="controller.js"></script>
+
+</body>
+</html>

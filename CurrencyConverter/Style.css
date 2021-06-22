@@ -1,0 +1,200 @@
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 5vh;
+}
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 5vh;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 2vh;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 1vh;
+    border: none;
+}
+#main {
+    transition: margin-left .5s;
+    padding: 0;
+}
+
+@media screen and (max-height: 100vh) {
+    .sidebar {padding-top: 1vh;}
+    .sidebar a {font-size: 3vh;}
+}
+* {
+    box-sizing: border-box;
+}
+.column1 {
+    float: left;
+    width: 30%;
+    padding: 1rem;
+    height: 90vh;
+    background-color:#aaa;
+}
+.column2 {
+    float: right;
+    width: 70%;
+    padding: 0;
+    height: 90vh;
+    background-color:white;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.TypeSelect{
+    font-size: 4vmin;
+}
+
+
+.display1{
+    background-color: cornflowerblue;
+    height: 25vh;
+    padding-top: 8vh;
+    text-align: left;
+    width:70vw; 
+    border-style: solid;
+}
+
+.container > div {
+    display: inline-block;
+    display: -moz-inline-box;
+    *display: inline;
+    zoom: 1;
+    width: 33%;
+    text-align: center;
+}
+button{
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 1vw;
+    height: 14vh;
+    width: 20vw;
+    border-radius: 8px;
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:active{
+    background-color: #4CAF50;
+}
+
+html, body{
+    text-align: center;
+    background-color: black;
+    font-family: Calibri, serif ;
+}
+
+header{
+    background-color: black;
+    margin: 0;
+    color: white;
+}
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 6vh;
+}
+
+#VisitingButton{
+    height: 10vh;
+    width: 22vw;
+    font-size: 3vh;
+
+}
+#VisingPicture{
+    height: 7vh;
+    padding: 0;
+    width: 22vw;
+    margin: auto;
+    color: black;
+    font-size: 5vh;
+}
+#mySidebar1 button{
+    height: 14vh;
+    width: 70vw;
+    font-size: 7vh;
+    border: solid;
+}
+
+#mySidebar2 button{
+    height: 14vh;
+    width: 70vw;
+    font-size: 7vh;
+    border: solid;
+}
+#HomeButton{
+    height: 10vh;
+    width: 22vw;
+    font-size: 3vh;
+}
+#HomePicture{
+    height: 7vh;
+    padding: 0;
+    width: 22vw;
+    margin: auto;
+    color: black;
+    font-size: 5vh;
+}
+
+#VisitFlag{
+    padding-top: 0.5vh;
+}
+
+#HomeFlag{
+    padding-top: 0.5vh;
+}
+
+#Unit{
+    position: absolute;
+    font-size: 3.5vh;
+}
+#outPut{
+    text-align: left;
+    font-size: 8vh;
+}
+#TouchPad{
+    font-size: 8vh;
+}
+
+#bankText{
+    height: 5vh;
+    width: 20vw;
+    margin: auto;
+    font-size: 2vh;
+}
+
+#dropdown{
+    background-color: lightskyblue;
+    width: 20vw;
+    height: 5.5vh;
+}
